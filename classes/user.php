@@ -1,5 +1,5 @@
 <?php
-    require_once('../config/database.php');
+    require_once('database.php');
 
     class User {
         private $id, $firstName, $lastName, $email, $password, $db;
@@ -86,16 +86,16 @@
                     header('location: ../register.php');
                 } else {
                     $hashedPassword = password_hash($this -> password, PASSWORD_DEFAULT);
-                    $this -> db -> query('INSERT INTO users(firstName, lastName, email, password) VALUES (:firstName, :lastName, :email, :password)');
+                    $this -> db -> query('INSERT INTO users(firstName, lastName, usertype, email, password) VALUES (:firstName, :lastName, :usertype, :email, :password)');
                     $this -> db -> bind(':firstName', $this -> firstName);
                     $this -> db -> bind(':lastName', $this -> lastName);
+                    $this -> db -> bind(':usertype', 'user');
                     $this -> db -> bind(':email', $this -> email);
                     $this -> db -> bind(':password', $hashedPassword);
                     $this -> db -> execute();
                     $_SESSION['successMessage'] = "You have successfully registered! You may now login.";
-                    header('location ../login.php');
+                    header('location: ../login.php');
                 }
-
 
             } catch (PDOException $e) {
                 echo $e -> getMessage();
@@ -112,17 +112,16 @@
 
                 if($this -> db -> rowCount() > 0){
                     if(password_verify($this -> password, $userRow -> password)){
+                        $_SESSION['usertype'] = $userRow -> usertype;
                         $_SESSION['user_session'] = $userRow -> userId;
-                        return true;
+                        header('location: ../profile.php');
                     } else {
                         $_SESSION['errorMessage'] = 'Sorry, the credentials you have provided are incorrect. Please try again.';
                         header('location: ../login.php');
-                        return false;
                     }
                 } else {
                         $_SESSION['errorMessage'] = 'Sorry, the email you have provided is not registered.';
                         header('location: ../login.php');
-                        return false;
                 }
 
             } catch (PDOException $e) {
@@ -132,6 +131,12 @@
 
         function isLoggedIn(){
             if(isset($_SESSION['user_session'])){
+                return true;
+            }
+        }
+
+        function isAdmin(){
+            if($_SESSION['usertype'] === 'admin'){
                 return true;
             }
         }

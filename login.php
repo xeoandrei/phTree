@@ -1,6 +1,4 @@
 <?php
-    require_once('config/database.php');
-    $db = new Database();
     include_once('partials/user_header.php');
 ?>
 
@@ -9,6 +7,11 @@
 <body>
     <div class="container my-5">
         <?php
+
+            if($user -> isLoggedIn()){
+                header('location: index.php');
+            }
+
             if(isset($_SESSION['successMessage'])){
                 echo "<div class='alert alert-success'>" . $_SESSION['successMessage'] . "</div>";
                 unset($_SESSION['successMessage']);

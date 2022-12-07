@@ -1,6 +1,4 @@
 <?php
-    require_once('config/database.php');
-    $db = new Database();
     include_once('partials/user_header.php');
 ?>
 
@@ -8,6 +6,7 @@
 <html lang="en">
 <body>
     <div class="container my-5">
+        
         <h1>Welcome to PHTree!</h1>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
