@@ -9,10 +9,10 @@
     <nav class="navbar p-0 mb-3">  
         <ul class="nav nav-tabs border-0 ms-3">
             <li class="nav-item">
-                <a class="nav-link active" href="admin-products.php">All</a>
+                <a class="nav-link" href="admin-products.php">All</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin-view-appliances.php">Appliance</a>
+                <a class="nav-link active" href="admin-view-appliances.php">Appliance</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="admin-view-furnitures.php">Furniture</a>

@@ -86,15 +86,6 @@
 
         }
 
-        function getAppliance(){
-            $this->db->query("SELECT * FROM products WHERE category ='Appliance'");
-            return $this->db->resultset();
-        }
-
-        function getFurniture(){
-            $this->db->query("SELECT * FROM products WHERE category ='Furniture'");
-            return $this->db->resultset();
-        }
 
         function addProduct(){
             $this->db->query("INSERT INTO products (name, price, quantity, category, image) VALUES (:name, :price, :quantity, :category, :image)");
