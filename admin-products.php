@@ -36,9 +36,10 @@
                                     <td><?php echo "₱" . $val->price . ".00";?></td>
                                     <td><?php echo $val->quantity;?></td>
                                     <td><?php echo $val->category;?></td>
-                                    <td><?php echo "demo";?></td>
+                                    <?php $image='assets/products/'.$val->image;?>
+                                    <td><img src= <?php echo "$image"?> class="tablesquare" width="50" height="50"></td>
                                     <td>
-                                        <a href="admin-view-product.php?id= <?php $val->productId;?> "><i class="fa-solid fa-eye me-2"></i></a>
+                                        <a href="admin-view-product.php?productId=<?php echo $val->productId;?> "><i class="fa-solid fa-eye me-2"></i></a>
                                         <a href="#"><i class="fa-solid fa-pen-to-square me-2"></i></a>
                                         <a href="#"><i class="fa-solid fa-trash me-2"></i></a>
                                     </td>

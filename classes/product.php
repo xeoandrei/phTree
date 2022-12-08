@@ -2,7 +2,7 @@
     require_once('database.php');
     class Product{
 
-        private $id, $name, $price, $quantity, $category, $db;
+        private $productId, $name, $price, $quantity, $category, $image, $db;
 
         function __construct()
         {
@@ -11,8 +11,8 @@
 
         //getters
 
-        function getId(){
-            return $this->id;
+        function getProductId(){
+            return $this->productId;
         }
 
         function getName(){
@@ -31,11 +31,15 @@
             return $this->category;
         }
 
+        function getImage(){
+            return $this->image;
+        }
+
 
         //setters
 
-        function setId($id){
-        $this->id = $id;
+        function setProductId($productId){
+        $this->productId = $productId;
         }
 
         function setName($name){
@@ -54,25 +58,31 @@
             $this->category = $category;
         }
 
+        function setImage($image){
+            $this->image = $image;
+        }
+
+
 
         function getProducts(){
             $this->db->query("SELECT * FROM products");
             return $this->db->resultset();
         }
 
-        function getProductByid($id){
-            $this->db->query("SELECT * FROM products WHERE id = :id");
-            $this->db->bind(":id",$id);
+        function getProductByid($productId){
+            $this->db->query("SELECT * FROM products WHERE productId = :productId");
+            $this->db->bind(":productId",$productId);
             return $this->db->getSingle();
 
         }
 
         function addProduct(){
-            $this->db->query("INSERT INTO products (name, price, quantity, category) VALUES (:name, :price, :quantity, :category)");
+            $this->db->query("INSERT INTO products (name, price, quantity, category, image) VALUES (:name, :price, :quantity, :category, :image)");
             $this->db->bind(":name", $this->name);
             $this->db->bind(":price", $this->price);
             $this->db->bind(":quantity", $this->quantity);
             $this->db->bind(":category", $this->category);
+            $this->db->bind(":image", $this->image);
             $this->db->execute();
 
         }
@@ -85,6 +95,7 @@
             $this->db->bind(":quantity", $data['quantity']);
             $this->db->bind(":category", $data['category']);
             $this->db->execute();
+            
 
         }
 
