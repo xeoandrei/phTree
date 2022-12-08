@@ -103,6 +103,16 @@
 
         }
 
+        function upgradeAccount($userId){
+            $this->db->query("UPDATE users SET usertype = 'admin' WHERE userId = $userId");
+            $this->db->execute();
+        }
+
+        function downgradeAccount($userId){
+            $this->db->query("UPDATE users SET usertype = 'user' WHERE userId = $userId");
+            $this->db->execute();
+        }
+
         function login(){
             try {
                 $this -> db -> query('SELECT * FROM users WHERE email = :email');

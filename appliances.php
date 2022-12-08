@@ -18,7 +18,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $val -> name ?></h5>
                             <p class="card-text">Price: ₱<?php echo $val -> price ?></p>
-                            <a class="btn btn-primary" href="confirm-checkout.php?productName=<?php echo $val -> name ?>&productId=<?php echo $val -> furnitureId ?>&total=<?php echo $val -> price ?>">Buy</a>
+                            <a class="btn btn-primary" href="confirm-checkout.php?productName=<?php echo $val -> name ?>&productId=<?php echo $val -> productId ?>&total=<?php echo $val -> price ?>">Buy</a>
                         </div>
                     </div>
                 </div>

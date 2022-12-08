@@ -33,10 +33,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="admin-products.php">Products</a>
+          <a class="nav-link" href="#">Appliances</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Users</a>
+          <a class="nav-link" href="admin-furnitures.php">Furnitures</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin-view-users.php">Users</a>
         </li>
       </ul>
 
