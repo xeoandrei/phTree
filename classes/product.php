@@ -2,7 +2,7 @@
     require_once('database.php');
     class Product{
 
-        private $productId, $name, $price, $quantity, $category, $image, $db;
+        private $productId, $name, $price, $quantity, $category, $db;
 
         function __construct()
         {
@@ -69,7 +69,7 @@
             return $this->db->resultset();
         }
 
-        function getProductByid($productId){
+        function getProductById($productId){
             $this->db->query("SELECT * FROM products WHERE productId = :productId");
             $this->db->bind(":productId",$productId);
             return $this->db->getSingle();
@@ -88,20 +88,21 @@
         }
 
         function updateProduct($data){
-            $this->db->query("UPDATE products SET name = :name, price = :price, quantity = :quantity,  category = :category WHERE id = :id");
-            $this->db->bind(":id", $data['id']);
+            $this->db->query("UPDATE products SET name = :name, price = :price, quantity = :quantity,  category = :category, image = :image WHERE productId = :productId");
+            $this->db->bind(":productId", $data['productId']);
             $this->db->bind(":name", $data['name']);
             $this->db->bind(":price", $data['price']);
             $this->db->bind(":quantity", $data['quantity']);
             $this->db->bind(":category", $data['category']);
+            $this->db->bind(":image", $data['image']);
             $this->db->execute();
             
 
         }
 
-        function deleteProduct($id){
-            $this->db->query("DELETE FROM products WHERE id = :id");
-            $this->db->bind(":id", $id);
+        function deleteProduct($productId){
+            $this->db->query("DELETE FROM products WHERE productId = :productId");
+            $this->db->bind(":productId", $productId);
             $this->db->execute();
 
         }

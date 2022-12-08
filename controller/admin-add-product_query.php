@@ -16,5 +16,5 @@
        
         header('location: ../admin-products.php');
     }   
-
+    header('location: ../admin-products.php');
 ?>
