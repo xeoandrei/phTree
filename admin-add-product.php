@@ -2,7 +2,7 @@
     include_once('partials/admin_header.php');
 ?>
 <div class="container my-5">
-    <h1>ADD FURNITURE</h1>
+    <h1>ADD PRODUCT</h1>
 
     <form action="controller/admin-add-product_query.php" method = "post">
         <div class="mb-3">
@@ -11,15 +11,16 @@
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="number" class="form-control" id="price" name="price" required>
+            <input type="number" class="form-control" id="price" name="price" min="1" required>
         </div>
         <div class="mb-3">
             <label class="quantity" class="form-label">Quantity</label>
-            <input type="number" class="form-control" id="quantity" name="quantity" required>
+            <input type="number" class="form-control" id="quantity" name="quantity" min="1" required>
         </div>
         <div class="mb-3">
-            <label for="category" class="form-label">Category:</label>
+            <label for="category" class="form-label">Category</label>
             <select name="category" id="category" class="form-control" required>
+                <option value = "">--Select Category--</option>
                 <option value="Appliance">Appliance</option>
                 <option value="Furniture">Furniture</option>
             </select>

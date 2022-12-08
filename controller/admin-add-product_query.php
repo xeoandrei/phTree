@@ -10,5 +10,5 @@
         $product->setCategory($_POST['category']);
         $product->addProduct();
     }   
-
+    header('location: ../admin-products.php');
 ?>

@@ -1,6 +1,6 @@
 <?php
     include_once('partials/user_header.php');
-    $products = $furniture -> getFurnitures();
+    $products = $product -> getProducts();
 ?>
 
 

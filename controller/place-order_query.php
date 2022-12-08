@@ -2,10 +2,11 @@
 
 require_once('../classes/order.php');
 require_once('../classes/user.php');
-require_once('../classes/furniture.php');
+require_once('../classes/product.php');
 
 $order = new Order();
 $user = new User();
+$product = new Product();
 if($user -> isLoggedIn()){
     $order -> setCustomerId($_SESSION['user_session']);
     $order -> setProductId($_GET['productId']);

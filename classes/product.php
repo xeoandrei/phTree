@@ -2,7 +2,7 @@
     require_once('database.php');
     class Product{
 
-        private $id, $name, $price, $quantity, $category, $db;
+        private $productId, $name, $price, $quantity, $category, $db;
 
         function __construct()
         {
@@ -11,8 +11,8 @@
 
         //getters
 
-        function getId(){
-            return $this->id;
+        function getProductId(){
+            return $this->productId;
         }
 
         function getName(){
@@ -34,8 +34,8 @@
 
         //setters
 
-        function setId($id){
-        $this->id = $id;
+        function setProductId($productId){
+        $this->productId = $productId;
         }
 
         function setName($name){
@@ -60,9 +60,9 @@
             return $this->db->resultset();
         }
 
-        function getProductByid($id){
-            $this->db->query("SELECT * FROM products WHERE id = :id");
-            $this->db->bind(":id",$id);
+        function getProductById($productId){
+            $this->db->query("SELECT * FROM products WHERE productId = :productId");
+            $this->db->bind(":productId",$productId);
             return $this->db->getSingle();
 
         }
@@ -78,8 +78,8 @@
         }
 
         function updateProduct($data){
-            $this->db->query("UPDATE products SET name = :name, price = :price, quantity = :quantity,  category = :category WHERE id = :id");
-            $this->db->bind(":id", $data['id']);
+            $this->db->query("UPDATE products SET name = :name, price = :price, quantity = :quantity,  category = :category WHERE productId = :productId");
+            $this->db->bind(":productId", $data['productId']);
             $this->db->bind(":name", $data['name']);
             $this->db->bind(":price", $data['price']);
             $this->db->bind(":quantity", $data['quantity']);
@@ -88,9 +88,9 @@
 
         }
 
-        function deleteProduct($id){
-            $this->db->query("DELETE FROM products WHERE id = :id");
-            $this->db->bind(":id", $id);
+        function deleteProduct($productId){
+            $this->db->query("DELETE FROM products WHERE productId = :productId");
+            $this->db->bind(":productId", $productId);
             $this->db->execute();
 
         }
