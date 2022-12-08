@@ -5,15 +5,18 @@
 
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold text-light">PHTree</h5>
+                <p>
+                    PHTree is an academic project developed as a one-stop-shop for home appliances & furniture!
+                    </p>
             </div>
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold text-light">Products</h5>
                 <p>
-                    <a href="/products/onhand" class="text-white" style="text-decoration: none;">Furnitures</a>
+                    <a href="user-view-furniture.php" class="text-white" style="text-decoration: none;">Furnitures</a>
                 </p>
                 <p>
-                    <a href="/products/preorder" class="text-white" style="text-decoration: none;">Appliances</a>
+                    <a href="user-view-appliances.php" class="text-white" style="text-decoration: none;">Appliances</a>
                 </p>
             </div>
 
