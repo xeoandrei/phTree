@@ -1,10 +1,10 @@
 <?php
   require_once('classes/database.php');
   require_once('classes/user.php');
-  require_once('classes/furniture.php');
+  require_once('classes/product.php');
   $db = new Database();
   $user = new User();
-  $furniture = new Furniture();
+  $product = new Product();
 ?>
 <head>
     <meta charset="UTF-8">
