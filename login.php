@@ -11,6 +11,9 @@
             if($user -> isLoggedIn()){
                 header('location: index.php');
             }
+            else if(($user -> isLoggedIn()) AND $user -> isAdmin()){
+                header('location: dashboard.php');
+            }
 
             if(isset($_SESSION['successMessage'])){
                 echo "<div class='alert alert-success'>" . $_SESSION['successMessage'] . "</div>";

@@ -1,8 +1,10 @@
 <?php
   require_once('classes/database.php');
   require_once('classes/user.php');
+  require_once('classes/furniture.php');
   $db = new Database();
   $user = new User();
+  $furniture = new Furniture();
 ?>
 <head>
     <meta charset="UTF-8">
@@ -14,6 +16,9 @@
 
     <!-- Custom CSS -->
     <link href="css/user-styles.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/49aaec98d5.js" crossorigin="anonymous"></script>
 </head>
 
 <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
@@ -31,7 +36,7 @@
           <a class="nav-link" href="#">Appliances</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Furnitures</a>
+          <a class="nav-link" href="admin-furnitures.php">Furnitures</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Users</a>
