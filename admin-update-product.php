@@ -36,6 +36,6 @@
         <?php $image='assets/products/'.$products->image;?>
         <img src=<?php echo "$image"?> class="img-fluid rounded-start" width="75" height="75" alt="..."><br><br>
         <button type="submit" class="btn btn-primary" name="update">Submit</button>
-        <a href="admin-products.php" class="btn btn-dark">Cancel</a>
+        <a href="javascript:history.back()" class="btn btn-dark">Cancel</a>
     </form>
 </div>

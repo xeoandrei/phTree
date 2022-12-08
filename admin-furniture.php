@@ -2,20 +2,20 @@
     include_once('partials/admin_header.php');
     require_once('classes/product.php');
     $product = new Product();
-    $products = $product->getProducts();
+    $products = $product->getFurniture();
 ?>
 <div class="container my-5">
-    <h1 class="fw-bold text-center mt-2 mb-3">Products</h1> 
+    <h1 class="fw-bold text-center mt-2 mb-3">Furniture</h1> 
     <nav class="navbar p-0 mb-3">  
         <ul class="nav nav-tabs border-0">
             <li class="nav-item">
-                <a class="nav-link active" href="admin-products.php">All</a>
+                <a class="nav-link" href="admin-products.php">All</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="admin-appliances.php">Appliance</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin-furniture.php">Furniture</a>
+                <a class="nav-link active" href="admin-furniture.php">Furniture</a>
             </li>
         </ul>
     <nav class="navbar p-0 justify-content-end me-3">  

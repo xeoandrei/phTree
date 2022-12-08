@@ -1,6 +1,6 @@
 <?php
     include_once('partials/user_header.php');
-    $products = $product -> getProducts();
+    $products = $product -> getAppliance();
 ?>
 
 
@@ -19,10 +19,12 @@
                         unset($_SESSION['errorMessage']);
                     }
                 ?>
+                  <h1>APPLIANCES</h1>
                 <?php foreach($products as $val){ ?>
                 <div class="col-lg-4">
                     <div class="card my-2">
-                        <img src="..." class="card-img-top" alt="...">
+                    <?php $image='assets/products/'.$val->image;?>
+                    <img src=<?php echo "$image"?> class="card-img-top"  alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $val -> name ?></h5>
                             <p class="card-text">Price: ₱<?php echo $val -> price ?></p>

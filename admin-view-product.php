@@ -23,6 +23,6 @@
     </div>
     </div>
     <div class="mb-5">
-        <a href="admin-products.php" class="btn btn-dark">Go Back</a>
+        <a href="javascript:history.back()" class="btn btn-dark">Go Back</a>
     </div> 
 </div>
