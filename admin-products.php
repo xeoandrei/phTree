@@ -7,23 +7,22 @@
 <div class="container my-5">
     <h1 class="fw-bold text-center mt-2 mb-3">Products</h1> 
     <nav class="navbar p-0 mb-3">  
-        <ul class="nav nav-tabs border-0">
+        <ul class="nav nav-tabs border-0 ms-3">
             <li class="nav-item">
                 <a class="nav-link active" href="admin-products.php">All</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin-appliances.php">Appliance</a>
+                <a class="nav-link" href="admin-view-appliances.php">Appliance</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin-furniture.php">Furniture</a>
+                <a class="nav-link" href="admin-view-furnitures.php">Furniture</a>
             </li>
         </ul>
-    <nav class="navbar p-0 justify-content-end me-3">  
-        <ul class="nav nav-tabs border-0">
-            <li class="nav-item">
-                <a class="nav-link btn btn-success" href="admin-add-product.php">Add<i class="fa-solid fa-plus ms-1"></i></a>
-            </li>
-        </ul>    
+        <div class="btn-group">
+            <div class="me-3">
+                <a class="btn btn-outline-success" href="admin-add-product.php">Add<i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>    
     </nav>  
     <div class="container">  
         <div class="col-lg col-md mb-3">

@@ -6,13 +6,24 @@
 ?>
 <div class="container my-5">
     <h1 class="fw-bold text-center mt-2 mb-3">Furnitures</h1> 
-    <nav class="navbar p-0 justify-content-end me-3">  
-        <ul class="nav nav-tabs border-0">
+    <nav class="navbar p-0 mb-3">  
+        <ul class="nav nav-tabs border-0 ms-3">
             <li class="nav-item">
-                <a class="nav-link btn btn-success" href="admin-add-product.php">Add<i class="fa-solid fa-plus ms-1"></i></a>
+                <a class="nav-link active" href="admin-products.php">All</a>
             </li>
-        </ul>    
-    </nav>  
+            <li class="nav-item">
+                <a class="nav-link" href="admin-view-appliances.php">Appliance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin-furnitures.php">Furniture</a>
+            </li>
+        </ul>
+        <div class="btn-group">
+            <div class="me-3">
+                <a class="btn btn-outline-success" href="admin-add-product.php">Add<i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>    
+    </nav>   
     <div class="container">  
         <div class="col-lg col-md mb-3">
             <div class="card shadow p-3 bg-body rounded">

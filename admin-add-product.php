@@ -30,6 +30,6 @@
             <input type="file" class="form-control" id="image" name="image" accept="image/png, image/jpeg" required>
         </div>
         <button type="submit" class="btn btn-primary" name="save">Submit</button>
-        <a href="admin-products.php" class="btn btn-dark">Cancel</a>
+        <a href="javascript:history.back()" class="btn btn-dark">Cancel</a>
     </form>
 </div>
