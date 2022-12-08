@@ -1,10 +1,10 @@
 <?php
   require_once('classes/database.php');
   require_once('classes/user.php');
-  require_once('classes/furniture.php');
+  require_once('classes/product.php');
   $db = new Database();
   $user = new User();
-  $furniture = new Furniture();
+  $product = new Product();
 ?>
 <head>
     <meta charset="UTF-8">
@@ -33,10 +33,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Appliances</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="admin-furnitures.php">Furnitures</a>
+          <a class="nav-link" href="admin-products.php">Products</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Users</a>
