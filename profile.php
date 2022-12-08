@@ -14,7 +14,8 @@
                 <h2 class="mb-4 fw-bold">Profile</h2>
                 <p>First Name: <?php echo $users->firstName ?></p>
                 <p>Last Name: <?php echo $users->lastName ?></p>
-                <p>Email: <?php echo $users->email ?></p>                
+                <p>Email: <?php echo $users->email ?></p>          
+                <p>Usertype: <?php echo $users->usertype ?></p>      
             </div>
         </div>
     </div>
