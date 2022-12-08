@@ -111,7 +111,25 @@
             $this->db->query("SELECT * FROM products");
             $this->db->execute();
             return $this->db->rowCount();
-        } 
+        }
+
+        function isQuantityZero($productId){
+            $this -> db -> query("SELECT * FROM products WHERE productId = :productId");
+            $this -> db -> bind(":productId", $productId);
+            $this -> db -> execute();
+            $result = $this->db->getSingle();
+            if($result -> quantity == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function decrementProductQuantity($productId){
+            $this->db->query("UPDATE products SET quantity = quantity - 1 WHERE productId = :productId");
+            $this->db->bind(":productId", $productId);
+            $this->db->execute();
+        }
 
 
     }

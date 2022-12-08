@@ -6,7 +6,15 @@
 <html lang="en">
 <body>
     <div class="container my-5">
-        
+        <?php
+            if(isset($_SESSION['successMessage'])){
+                echo "<div class='alert alert-success'>" . $_SESSION['successMessage'] . "</div>";
+                unset($_SESSION['successMessage']);
+            } else if(isset($_SESSION['errorMessage'])){
+                echo "<div class='alert alert-danger'>" . $_SESSION['errorMessage'] . "</div>";
+                unset($_SESSION['errorMessage']);
+            }
+        ?>
         <h1>Welcome to PHTree!</h1>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">

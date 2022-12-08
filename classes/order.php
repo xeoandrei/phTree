@@ -79,7 +79,9 @@
             $this -> db -> query("SELECT * FROM furniture");
             $this -> db -> execute();
             return $this -> db -> rowCount();
-        } 
+        }
+
+
 
 
     }
