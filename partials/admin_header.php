@@ -2,9 +2,11 @@
   require_once('classes/database.php');
   require_once('classes/user.php');
   require_once('classes/product.php');
+  require_once('classes/order.php');
   $db = new Database();
   $user = new User();
   $product = new Product();
+  $order = new Order();
 ?>
 <head>
     <meta charset="UTF-8">
