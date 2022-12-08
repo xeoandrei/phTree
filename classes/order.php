@@ -69,14 +69,14 @@
         }
 
         function deleteOrder($orderId){
-            $this -> db -> query("DELETE FROM furniture WHERE orderId = :orderId");
+            $this -> db -> query("DELETE FROM orders WHERE orderId = :orderId");
             $this -> db -> bind(":orderId", $orderId);
             $this -> db -> execute();
 
         }
 
         function countRow(){
-            $this -> db -> query("SELECT * FROM furniture");
+            $this -> db -> query("SELECT * FROM orders");
             $this -> db -> execute();
             return $this -> db -> rowCount();
         }
