@@ -75,8 +75,8 @@
 
         }
 
-        function countRow(){
-            $this -> db -> query("SELECT * FROM furniture");
+        function countRowOrders(){
+            $this -> db -> query("SELECT * FROM orders");
             $this -> db -> execute();
             return $this -> db -> rowCount();
         } 

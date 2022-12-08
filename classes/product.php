@@ -39,7 +39,7 @@
         //setters
 
         function setProductId($productId){
-        $this->productId = $productId;
+            $this->productId = $productId;
         }
 
         function setName($name){
@@ -66,6 +66,16 @@
 
         function getProducts(){
             $this->db->query("SELECT * FROM products");
+            return $this->db->resultset();
+        }
+
+        function getFurnitures(){
+            $this->db->query("SELECT * FROM products WHERE category = 'Furniture'");
+            return $this->db->resultset();
+        }
+
+        function getAppliances(){
+            $this->db->query("SELECT * FROM products WHERE category = 'Appliance'");
             return $this->db->resultset();
         }
 
@@ -107,8 +117,20 @@
 
         }
 
-        function countRow(){
+        function countRowProducts(){
             $this->db->query("SELECT * FROM products");
+            $this->db->execute();
+            return $this->db->rowCount();
+        } 
+
+        function countRowFurnitures(){
+            $this->db->query("SELECT * FROM products WHERE category = 'Furniture'");
+            $this->db->execute();
+            return $this->db->rowCount();
+        } 
+
+        function countRowAppliances(){
+            $this->db->query("SELECT * FROM products WHERE category = 'Appliance'");
             $this->db->execute();
             return $this->db->rowCount();
         } 
