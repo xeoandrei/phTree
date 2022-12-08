@@ -75,7 +75,7 @@
 
         }
 
-        function countRow(){
+        function countRowOrders(){
             $this -> db -> query("SELECT * FROM orders");
             $this -> db -> execute();
             return $this -> db -> rowCount();
