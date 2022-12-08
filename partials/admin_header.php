@@ -2,11 +2,9 @@
   require_once('classes/database.php');
   require_once('classes/user.php');
   require_once('classes/furniture.php');
-  require_once('classes/order.php');
   $db = new Database();
   $user = new User();
   $furniture = new Furniture();
-  $order = new Order();
 ?>
 <head>
     <meta charset="UTF-8">
@@ -39,9 +37,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="admin-furnitures.php">Furnitures</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="admin-view-orders.php">Orders</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="admin-view-users.php">Users</a>
