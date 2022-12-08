@@ -15,7 +15,7 @@
                 <a class="nav-link" href="admin-view-appliances.php">Appliance</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="admin-furnitures.php">Furniture</a>
+                <a class="nav-link active" href="admin-view-furnitures.php">Furniture</a>
             </li>
         </ul>
         <div class="btn-group">
