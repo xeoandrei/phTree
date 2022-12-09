@@ -13,17 +13,17 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold text-light">Products</h5>
                 <p>
-                    <a href="user-view-furniture.php" class="text-white" style="text-decoration: none;">Furnitures</a>
+                    <a href="furniture.php" class="text-white" style="text-decoration: none;">Furnitures</a>
                 </p>
                 <p>
-                    <a href="user-view-appliances.php" class="text-white" style="text-decoration: none;">Appliances</a>
+                    <a href="appliances.php" class="text-white" style="text-decoration: none;">Appliances</a>
                 </p>
             </div>
 
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold text-light">Useful links</h5>
                 <p>
-                    <a href="/tos" class="text-white" style="text-decoration: none;">About Us</a>
+                    <a href="about-us.php" class="text-white" style="text-decoration: none;">About Us</a>
                 </p>
                 <p>
                     <a href="/faqs" class="text-white" style="text-decoration: none;">FAQs</a>
@@ -33,7 +33,7 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold text-light">Contact</h5>
                     <p>
-                        <i class="fas fa-envelope me-2"></i>email@email.com
+                        <i class="fas fa-envelope me-2"></i>phtree@email.com
                     </p>
                     <p> 
                         <i class="fas fa-phone me-2"></i>09984567987
