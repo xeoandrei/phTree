@@ -18,8 +18,9 @@ include_once('partials/user_header.php');
                         </p>
                         </div>
                         <div class="whiteText mt-2"> 
-                        PHTree is up and available! Shop now! 
-
+                        <p class="whiteText">
+                            PHTree is up and available! Shop now! 
+                        </p>
                         </div>           
             </div>        
 
