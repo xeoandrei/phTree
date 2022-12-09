@@ -19,7 +19,7 @@
                         unset($_SESSION['errorMessage']);
                     }
                 ?>
-                  <h1>FURNITURE</h1>
+                  <h1>FURNITURES</h1>
                 <?php foreach($products as $val){ ?>
                 <div class="col-lg-4">
                     <div class="card my-2">
