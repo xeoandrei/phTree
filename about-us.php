@@ -21,7 +21,7 @@ include_once('partials/user_header.php');
                         PHTree is up and available! Shop now! 
                         </div>           
             </div>        
-
+        </div>
 
 <?php 
     include_once('partials/user_footer.php');
