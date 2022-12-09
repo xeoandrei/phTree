@@ -20,7 +20,7 @@
     <link href="css/user-styles.css" rel="stylesheet">
 </head>
 
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark navbar-inner">
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
 
   <div class="container-fluid container">
 
